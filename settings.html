@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Santali Script Converter — Settings</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <div class="page" id="page">
+      <header class="header">
+        <div class="header-inner">
+          <div class="logo" aria-hidden="true">ᱯᱟᱨᱥᱤ</div>
+          <div>
+            <h1 class="header-title">PARSI</h1>
+            <p class="header-sub">Settings</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- Preferences -->
+        <section class="card" aria-labelledby="sec-pref">
+          <h2 class="section-title" id="sec-pref">
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                d="M4 8h12M13 5l3 3-3 3M16 12H4M7 9l-3 3 3 3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Preferences
+          </h2>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label" for="auto-clip"
+                >Auto-copy result</label
+              >
+              <p class="setting-desc">
+                Automatically copy the converted or translated text to
+                clipboard.
+              </p>
+            </div>
+            <label class="toggle"
+              ><input type="checkbox" id="auto-clip" role="switch" /><span
+                class="track"
+                ><span class="thumb"></span></span
+            ></label>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label" for="theme-select">Theme</label>
+              <p class="setting-desc">
+                Light, dark, or follow your system setting.
+              </p>
+            </div>
+            <select class="select" id="theme-select">
+              <option value="auto">System default</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Notification duration</label>
+              <p class="setting-desc">
+                How long the toast notification stays visible.
+              </p>
+            </div>
+            <div class="stepper">
+              <button class="step-btn" id="dur-minus" aria-label="Decrease">
+                −
+              </button>
+              <span class="step-val" id="dur-val">3.5s</span>
+              <button class="step-btn" id="dur-plus" aria-label="Increase">
+                +
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shortcuts -->
+        <section class="card" aria-labelledby="sec-keys">
+          <h2 class="section-title" id="sec-keys">
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="2" y="5" width="16" height="11" rx="2" />
+              <path
+                d="M5 9h1M8 9h1M11 9h1M14 9h1M5 12h2M8 12h1M11 12h1M14 12h2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Keyboard shortcuts
+          </h2>
+          <p class="shortcuts-hint">
+            Managed by Chrome — click <strong>Configure</strong> to change them.
+          </p>
+          <div class="shortcut-row">
+            <div class="shortcut-info">
+              <span class="shortcut-name">Convert to Latin</span>
+              <div class="keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span
+                ><kbd>L</kbd>
+              </div>
+            </div>
+          </div>
+          <div class="shortcut-row">
+            <div class="shortcut-info">
+              <span class="shortcut-name">Convert to Ol Chiki</span>
+              <div class="keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span
+                ><kbd>S</kbd>
+              </div>
+            </div>
+          </div>
+          <button class="link-btn" id="configure-shortcuts-btn">
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M8 1v2M8 13v2M1 8h2M13 8h2" stroke-linecap="round" />
+              <circle cx="8" cy="8" r="3" />
+            </svg>
+            Configure shortcuts in Chrome
+          </button>
+        </section>
+
+        <div class="actions-row">
+          <button class="btn-ghost" id="reset-btn">Reset to defaults</button>
+          <button class="btn-primary" id="save-btn">
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M13 13H3V3h7l3 3v7z" stroke-linejoin="round" />
+              <rect x="5" y="9" width="6" height="4" rx=".5" />
+              <rect x="5" y="3" width="4" height="3" rx=".5" />
+            </svg>
+            Save settings
+          </button>
+        </div>
+        <div class="save-confirm" id="save-confirm" hidden>
+          <svg
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              d="M3 8l3 3 7-7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Settings saved!
+        </div>
+
+        <footer class="about">
+          <span class="about-logo" aria-hidden="true">ᱚᱞ ᱪᱤᱠᱤ</span>
+          <span>Santali Script Converter</span>
+        </footer>
+      </main>
+    </div>
+    <script src="settings.js"></script>
+  </body>
+</html>
